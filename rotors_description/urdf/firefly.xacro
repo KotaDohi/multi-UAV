@@ -53,11 +53,44 @@
   </xacro:property>
 
   <!-- Included URDF Files -->
-  <xacro:include filename="$(find rotors_description)/urdf/multirotor_base.xacro" />
+  <xacro:include filename="$(find rotors_description)/urdf/final.xacro"/>
 
   <!-- Instantiate multirotor_base_macro once -->
   <xacro:multirotor_base_macro
     robot_namespace="${namespace}"
+    mass="${mass}"
+    body_width="${body_width}"
+    body_height="${body_height}"
+    use_mesh_file="${use_mesh_file}"
+    mesh_file="${mesh_file}"
+    >
+    <xacro:insert_block name="body_inertia" />
+  </xacro:multirotor_base_macro>
+
+  <xacro:multirotor_base_macro
+    robot_namespace="firefly2"
+    mass="${mass}"
+    body_width="${body_width}"
+    body_height="${body_height}"
+    use_mesh_file="${use_mesh_file}"
+    mesh_file="${mesh_file}"
+    >
+    <xacro:insert_block name="body_inertia" />
+  </xacro:multirotor_base_macro>
+
+  <xacro:multirotor_base_macro
+    robot_namespace="firefly3"
+    mass="${mass}"
+    body_width="${body_width}"
+    body_height="${body_height}"
+    use_mesh_file="${use_mesh_file}"
+    mesh_file="${mesh_file}"
+    >
+    <xacro:insert_block name="body_inertia" />
+  </xacro:multirotor_base_macro>
+
+  <xacro:multirotor_base_macro
+    robot_namespace="firefly4"
     mass="${mass}"
     body_width="${body_width}"
     body_height="${body_height}"
@@ -197,5 +230,410 @@
     <origin xyz="${cos30*arm_length} -${sin30*arm_length} ${rotor_offset_top}" rpy="0 0 0" />
     <xacro:insert_block name="rotor_inertia" />
   </xacro:vertical_rotor>
+
+
+<!--firefly2-->
+<!-- Instantiate rotors -->
+<xacro:vertical_rotor
+  robot_namespace="firefly2"
+  suffix="front_left"
+  direction="ccw"
+  motor_constant="${motor_constant}"
+  moment_constant="${moment_constant}"
+  parent="firefly2/base_link"
+  mass_rotor="${mass_rotor}"
+  radius_rotor="${radius_rotor}"
+  time_constant_up="${time_constant_up}"
+  time_constant_down="${time_constant_down}"
+  max_rot_velocity="${max_rot_velocity}"
+  motor_number="0"
+  rotor_drag_coefficient="${rotor_drag_coefficient}"
+  rolling_moment_coefficient="${rolling_moment_coefficient}"
+  color="Red"
+  use_own_mesh="false"
+  mesh="">
+  <origin xyz="${cos30*arm_length} ${sin30*arm_length} ${rotor_offset_top}" rpy="0 0 0" />
+  <xacro:insert_block name="rotor_inertia" />
+</xacro:vertical_rotor>
+
+<xacro:vertical_rotor
+  robot_namespace="firefly2"
+  suffix="left"
+  direction="cw"
+  motor_constant="${motor_constant}"
+  moment_constant="${moment_constant}"
+  parent="firefly2/base_link"
+  mass_rotor="${mass_rotor}"
+  radius_rotor="${radius_rotor}"
+  time_constant_up="${time_constant_up}"
+  time_constant_down="${time_constant_down}"
+  max_rot_velocity="${max_rot_velocity}"
+  motor_number="1"
+  rotor_drag_coefficient="${rotor_drag_coefficient}"
+  rolling_moment_coefficient="${rolling_moment_coefficient}"
+  color="Blue"
+  use_own_mesh="false"
+  mesh="">
+  <origin xyz="0 ${arm_length} ${rotor_offset_top}" rpy="0 0 0" />
+  <xacro:insert_block name="rotor_inertia" />
+</xacro:vertical_rotor>
+
+<xacro:vertical_rotor robot_namespace="firefly2"
+  suffix="back_left"
+  direction="ccw"
+  motor_constant="${motor_constant}"
+  moment_constant="${moment_constant}"
+  parent="firefly2/base_link"
+  mass_rotor="${mass_rotor}"
+  radius_rotor="${radius_rotor}"
+  time_constant_up="${time_constant_up}"
+  time_constant_down="${time_constant_down}"
+  max_rot_velocity="${max_rot_velocity}"
+  motor_number="2"
+  rotor_drag_coefficient="${rotor_drag_coefficient}"
+  rolling_moment_coefficient="${rolling_moment_coefficient}"
+  color="Blue"
+  use_own_mesh="false"
+  mesh="">
+  <origin xyz="-${cos30*arm_length} ${sin30*arm_length} ${rotor_offset_top}" rpy="0 0 0" />
+  <xacro:insert_block name="rotor_inertia" />
+</xacro:vertical_rotor>
+
+<xacro:vertical_rotor robot_namespace="firefly2"
+  suffix="back_right"
+  direction="cw"
+  motor_constant="${motor_constant}"
+  moment_constant="${moment_constant}"
+  parent="firefly2/base_link"
+  mass_rotor="${mass_rotor}"
+  radius_rotor="${radius_rotor}"
+  time_constant_up="${time_constant_up}"
+  time_constant_down="${time_constant_down}"
+  max_rot_velocity="${max_rot_velocity}"
+  motor_number="3"
+  rotor_drag_coefficient="${rotor_drag_coefficient}"
+  rolling_moment_coefficient="${rolling_moment_coefficient}"
+  color="Blue"
+  use_own_mesh="false"
+  mesh="">
+  <origin xyz="-${cos30*arm_length} -${sin30*arm_length} ${rotor_offset_top}" rpy="0 0 0" />
+  <xacro:insert_block name="rotor_inertia" />
+</xacro:vertical_rotor>
+
+<xacro:vertical_rotor
+  robot_namespace="firefly2"
+  suffix="right"
+  direction="ccw"
+  motor_constant="${motor_constant}"
+  moment_constant="${moment_constant}"
+  parent="firefly2/base_link"
+  mass_rotor="${mass_rotor}"
+  radius_rotor="${radius_rotor}"
+  time_constant_up="${time_constant_up}"
+  time_constant_down="${time_constant_down}"
+  max_rot_velocity="${max_rot_velocity}"
+  motor_number="4"
+  rotor_drag_coefficient="${rotor_drag_coefficient}"
+  rolling_moment_coefficient="${rolling_moment_coefficient}"
+  color="Blue"
+  use_own_mesh="false"
+  mesh="">
+  <origin xyz="0 -${arm_length} ${rotor_offset_top}" rpy="0 0 0" />
+  <xacro:insert_block name="rotor_inertia" />
+</xacro:vertical_rotor>
+
+<xacro:vertical_rotor
+  robot_namespace="firefly2"
+  suffix="front_right"
+  direction="cw"
+  motor_constant="${motor_constant}"
+  moment_constant="${moment_constant}"
+  parent="firefly2/base_link"
+  mass_rotor="${mass_rotor}"
+  radius_rotor="${radius_rotor}"
+  time_constant_up="${time_constant_up}"
+  time_constant_down="${time_constant_down}"
+  max_rot_velocity="${max_rot_velocity}"
+  motor_number="5"
+  rotor_drag_coefficient="${rotor_drag_coefficient}"
+  rolling_moment_coefficient="${rolling_moment_coefficient}"
+  color="Red"
+  use_own_mesh="false"
+  mesh="">
+  <origin xyz="${cos30*arm_length} -${sin30*arm_length} ${rotor_offset_top}" rpy="0 0 0" />
+  <xacro:insert_block name="rotor_inertia" />
+</xacro:vertical_rotor>
+
+<!--firefly3-->
+<!-- Instantiate rotors -->
+<xacro:vertical_rotor
+  robot_namespace="firefly3"
+  suffix="front_left"
+  direction="ccw"
+  motor_constant="${motor_constant}"
+  moment_constant="${moment_constant}"
+  parent="firefly3/base_link"
+  mass_rotor="${mass_rotor}"
+  radius_rotor="${radius_rotor}"
+  time_constant_up="${time_constant_up}"
+  time_constant_down="${time_constant_down}"
+  max_rot_velocity="${max_rot_velocity}"
+  motor_number="0"
+  rotor_drag_coefficient="${rotor_drag_coefficient}"
+  rolling_moment_coefficient="${rolling_moment_coefficient}"
+  color="Red"
+  use_own_mesh="false"
+  mesh="">
+  <origin xyz="${cos30*arm_length} ${sin30*arm_length} ${rotor_offset_top}" rpy="0 0 0" />
+  <xacro:insert_block name="rotor_inertia" />
+</xacro:vertical_rotor>
+
+<xacro:vertical_rotor
+  robot_namespace="firefly3"
+  suffix="left"
+  direction="cw"
+  motor_constant="${motor_constant}"
+  moment_constant="${moment_constant}"
+  parent="firefly3/base_link"
+  mass_rotor="${mass_rotor}"
+  radius_rotor="${radius_rotor}"
+  time_constant_up="${time_constant_up}"
+  time_constant_down="${time_constant_down}"
+  max_rot_velocity="${max_rot_velocity}"
+  motor_number="1"
+  rotor_drag_coefficient="${rotor_drag_coefficient}"
+  rolling_moment_coefficient="${rolling_moment_coefficient}"
+  color="Blue"
+  use_own_mesh="false"
+  mesh="">
+  <origin xyz="0 ${arm_length} ${rotor_offset_top}" rpy="0 0 0" />
+  <xacro:insert_block name="rotor_inertia" />
+</xacro:vertical_rotor>
+
+<xacro:vertical_rotor robot_namespace="firefly3"
+  suffix="back_left"
+  direction="ccw"
+  motor_constant="${motor_constant}"
+  moment_constant="${moment_constant}"
+  parent="firefly3/base_link"
+  mass_rotor="${mass_rotor}"
+  radius_rotor="${radius_rotor}"
+  time_constant_up="${time_constant_up}"
+  time_constant_down="${time_constant_down}"
+  max_rot_velocity="${max_rot_velocity}"
+  motor_number="2"
+  rotor_drag_coefficient="${rotor_drag_coefficient}"
+  rolling_moment_coefficient="${rolling_moment_coefficient}"
+  color="Blue"
+  use_own_mesh="false"
+  mesh="">
+  <origin xyz="-${cos30*arm_length} ${sin30*arm_length} ${rotor_offset_top}" rpy="0 0 0" />
+  <xacro:insert_block name="rotor_inertia" />
+</xacro:vertical_rotor>
+
+<xacro:vertical_rotor robot_namespace="firefly3"
+  suffix="back_right"
+  direction="cw"
+  motor_constant="${motor_constant}"
+  moment_constant="${moment_constant}"
+  parent="firefly3/base_link"
+  mass_rotor="${mass_rotor}"
+  radius_rotor="${radius_rotor}"
+  time_constant_up="${time_constant_up}"
+  time_constant_down="${time_constant_down}"
+  max_rot_velocity="${max_rot_velocity}"
+  motor_number="3"
+  rotor_drag_coefficient="${rotor_drag_coefficient}"
+  rolling_moment_coefficient="${rolling_moment_coefficient}"
+  color="Blue"
+  use_own_mesh="false"
+  mesh="">
+  <origin xyz="-${cos30*arm_length} -${sin30*arm_length} ${rotor_offset_top}" rpy="0 0 0" />
+  <xacro:insert_block name="rotor_inertia" />
+</xacro:vertical_rotor>
+
+<xacro:vertical_rotor
+  robot_namespace="firefly3"
+  suffix="right"
+  direction="ccw"
+  motor_constant="${motor_constant}"
+  moment_constant="${moment_constant}"
+  parent="firefly3/base_link"
+  mass_rotor="${mass_rotor}"
+  radius_rotor="${radius_rotor}"
+  time_constant_up="${time_constant_up}"
+  time_constant_down="${time_constant_down}"
+  max_rot_velocity="${max_rot_velocity}"
+  motor_number="4"
+  rotor_drag_coefficient="${rotor_drag_coefficient}"
+  rolling_moment_coefficient="${rolling_moment_coefficient}"
+  color="Blue"
+  use_own_mesh="false"
+  mesh="">
+  <origin xyz="0 -${arm_length} ${rotor_offset_top}" rpy="0 0 0" />
+  <xacro:insert_block name="rotor_inertia" />
+</xacro:vertical_rotor>
+
+<xacro:vertical_rotor
+  robot_namespace="firefly3"
+  suffix="front_right"
+  direction="cw"
+  motor_constant="${motor_constant}"
+  moment_constant="${moment_constant}"
+  parent="firefly3/base_link"
+  mass_rotor="${mass_rotor}"
+  radius_rotor="${radius_rotor}"
+  time_constant_up="${time_constant_up}"
+  time_constant_down="${time_constant_down}"
+  max_rot_velocity="${max_rot_velocity}"
+  motor_number="5"
+  rotor_drag_coefficient="${rotor_drag_coefficient}"
+  rolling_moment_coefficient="${rolling_moment_coefficient}"
+  color="Red"
+  use_own_mesh="false"
+  mesh="">
+  <origin xyz="${cos30*arm_length} -${sin30*arm_length} ${rotor_offset_top}" rpy="0 0 0" />
+  <xacro:insert_block name="rotor_inertia" />
+</xacro:vertical_rotor>
+
+<!--firefly4-->
+<!-- Instantiate rotors -->
+<xacro:vertical_rotor
+  robot_namespace="firefly4"
+  suffix="front_left"
+  direction="ccw"
+  motor_constant="${motor_constant}"
+  moment_constant="${moment_constant}"
+  parent="firefly4/base_link"
+  mass_rotor="${mass_rotor}"
+  radius_rotor="${radius_rotor}"
+  time_constant_up="${time_constant_up}"
+  time_constant_down="${time_constant_down}"
+  max_rot_velocity="${max_rot_velocity}"
+  motor_number="0"
+  rotor_drag_coefficient="${rotor_drag_coefficient}"
+  rolling_moment_coefficient="${rolling_moment_coefficient}"
+  color="Red"
+  use_own_mesh="false"
+  mesh="">
+  <origin xyz="${cos30*arm_length} ${sin30*arm_length} ${rotor_offset_top}" rpy="0 0 0" />
+  <xacro:insert_block name="rotor_inertia" />
+</xacro:vertical_rotor>
+
+<xacro:vertical_rotor
+  robot_namespace="firefly4"
+  suffix="left"
+  direction="cw"
+  motor_constant="${motor_constant}"
+  moment_constant="${moment_constant}"
+  parent="firefly4/base_link"
+  mass_rotor="${mass_rotor}"
+  radius_rotor="${radius_rotor}"
+  time_constant_up="${time_constant_up}"
+  time_constant_down="${time_constant_down}"
+  max_rot_velocity="${max_rot_velocity}"
+  motor_number="1"
+  rotor_drag_coefficient="${rotor_drag_coefficient}"
+  rolling_moment_coefficient="${rolling_moment_coefficient}"
+  color="Blue"
+  use_own_mesh="false"
+  mesh="">
+  <origin xyz="0 ${arm_length} ${rotor_offset_top}" rpy="0 0 0" />
+  <xacro:insert_block name="rotor_inertia" />
+</xacro:vertical_rotor>
+
+<xacro:vertical_rotor robot_namespace="firefly4"
+  suffix="back_left"
+  direction="ccw"
+  motor_constant="${motor_constant}"
+  moment_constant="${moment_constant}"
+  parent="firefly4/base_link"
+  mass_rotor="${mass_rotor}"
+  radius_rotor="${radius_rotor}"
+  time_constant_up="${time_constant_up}"
+  time_constant_down="${time_constant_down}"
+  max_rot_velocity="${max_rot_velocity}"
+  motor_number="2"
+  rotor_drag_coefficient="${rotor_drag_coefficient}"
+  rolling_moment_coefficient="${rolling_moment_coefficient}"
+  color="Blue"
+  use_own_mesh="false"
+  mesh="">
+  <origin xyz="-${cos30*arm_length} ${sin30*arm_length} ${rotor_offset_top}" rpy="0 0 0" />
+  <xacro:insert_block name="rotor_inertia" />
+</xacro:vertical_rotor>
+
+<xacro:vertical_rotor robot_namespace="firefly4"
+  suffix="back_right"
+  direction="cw"
+  motor_constant="${motor_constant}"
+  moment_constant="${moment_constant}"
+  parent="firefly4/base_link"
+  mass_rotor="${mass_rotor}"
+  radius_rotor="${radius_rotor}"
+  time_constant_up="${time_constant_up}"
+  time_constant_down="${time_constant_down}"
+  max_rot_velocity="${max_rot_velocity}"
+  motor_number="3"
+  rotor_drag_coefficient="${rotor_drag_coefficient}"
+  rolling_moment_coefficient="${rolling_moment_coefficient}"
+  color="Blue"
+  use_own_mesh="false"
+  mesh="">
+  <origin xyz="-${cos30*arm_length} -${sin30*arm_length} ${rotor_offset_top}" rpy="0 0 0" />
+  <xacro:insert_block name="rotor_inertia" />
+</xacro:vertical_rotor>
+
+<xacro:vertical_rotor
+  robot_namespace="firefly4"
+  suffix="right"
+  direction="ccw"
+  motor_constant="${motor_constant}"
+  moment_constant="${moment_constant}"
+  parent="firefly4/base_link"
+  mass_rotor="${mass_rotor}"
+  radius_rotor="${radius_rotor}"
+  time_constant_up="${time_constant_up}"
+  time_constant_down="${time_constant_down}"
+  max_rot_velocity="${max_rot_velocity}"
+  motor_number="4"
+  rotor_drag_coefficient="${rotor_drag_coefficient}"
+  rolling_moment_coefficient="${rolling_moment_coefficient}"
+  color="Blue"
+  use_own_mesh="false"
+  mesh="">
+  <origin xyz="0 -${arm_length} ${rotor_offset_top}" rpy="0 0 0" />
+  <xacro:insert_block name="rotor_inertia" />
+</xacro:vertical_rotor>
+
+<xacro:vertical_rotor
+  robot_namespace="firefly4"
+  suffix="front_right"
+  direction="cw"
+  motor_constant="${motor_constant}"
+  moment_constant="${moment_constant}"
+  parent="firefly4/base_link"
+  mass_rotor="${mass_rotor}"
+  radius_rotor="${radius_rotor}"
+  time_constant_up="${time_constant_up}"
+  time_constant_down="${time_constant_down}"
+  max_rot_velocity="${max_rot_velocity}"
+  motor_number="5"
+  rotor_drag_coefficient="${rotor_drag_coefficient}"
+  rolling_moment_coefficient="${rolling_moment_coefficient}"
+  color="Red"
+  use_own_mesh="false"
+  mesh="">
+  <origin xyz="${cos30*arm_length} -${sin30*arm_length} ${rotor_offset_top}" rpy="0 0 0" />
+  <xacro:insert_block name="rotor_inertia" />
+</xacro:vertical_rotor>
+
+
+  <xacro:special
+    child0="${namespace}/base_link"
+    child1="firefly2/base_link"
+    child2="firefly3/base_link"
+    child3="firefly4/base_link">
+  </xacro:special>
 
 </robot>

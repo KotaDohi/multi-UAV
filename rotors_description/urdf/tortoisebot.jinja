@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+
+{%- set pi = 3.141592 -%}
+{%- set ball_r = 0.001 -%}
+{%- set ball_m = 0.0001 -%}
+{%- set cyl_r = 0.001 -%}
+{%- set cyl_l = 0.03 -%}
+{%- set cyl_m = 0.0005 -%}
+{%- set jun_m = 0.0005 -%}
+{%- set jun_r = 0.0005 -%}
+{%- set box_m = 1.0 -%}
+{%- set box_x = 0.6 -%}
+{%- set box_y = 0.3 -%}
+{%- set box_z = 0.3 -%}
+{%- set number_elements = 2 -%}
+<robot name="tortoisebot">
+
+
+  {%- macro tether_cylinder_link(n, direc) -%}
+    <link name="link_cylinder_{{n}}_{{direc}}">
+      <visual>
+        <geometry>
+          <cylinder length="{{cyl_l}}" radius="{{cyl_r}}"/>
+        </geometry>
+        <material name="black">
+          <color rgba="0 0 0 1"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+          <cylinder length="{{cyl_l}}" radius="{{cyl_r}}"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="{{cyl_m}}"/>
+        {%- set cyl_i = 1/12*cyl_m*(3*cyl_r**2+cyl_l**2) -%}
+        {%- set cyl_iz = 1/2*cyl_m*cyl_r**2 -%}
+        <inertia ixx="{{cyl_i}}" iyy="{{cyl_i}}" izz="{{cyl_iz}}" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+    </link>
+  {%- endmacro -%}
+
+
+
+  <!--tether_cylinder_joint-->
+  {%- macro tether_cylinder_joint(n, direc) -%}
+    <link name="junta1_{{n}}_{{direc}}">
+      <inertial>
+        <mass value="{{jun_m}}" />
+        <!--<inertia ixx="{{jun_i}}" ixy="0" ixz="0" iyy="{{jun_i}}" iyz="0" izz="{{jun_i}}" />-->
+        <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+      </inertial>
+    </link>
+    <link name="junta2_{{n}}_{{direc}}">
+      <inertial>
+        <mass value="{{jun_m}}" />
+        <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+      </inertial>
+    </link>
+    <link name="junta3_{{n}}_{{direc}}">
+      <inertial>
+        <mass value="{{jun_m}}" />
+        <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+      </inertial>
+    </link>
+
+    <!--base_cylinder_joint-->
+    <joint name="joint1_{{n}}_{{direc}}" type="continuous">
+      {% if n > 0 %}
+      <parent link="link_cylinder_{{n-1}}_{{direc}}"/>
+      {% if direc == 0 %}
+      <origin rpy="0 0 0" xyz="0 0 -{{cyl_l/2}}"/>
+      {% endif %}
+      {% if direc == 1 %}
+      <origin rpy="0 0 0" xyz="0 0 -{{cyl_l/2}}"/>
+      {% endif %}
+      {% if direc == 2 %}
+      <origin rpy="0 0 0" xyz="0 0 {{cyl_l/2}}"/>
+      {% endif %}
+      {% if direc == 3 %}
+      <origin rpy="0 0 0" xyz="0 0 {{cyl_l/2}}"/>
+      {% endif %}
+      {% endif %}
+
+      {% if n == 0 %}
+      <parent link="base_link"/>
+      <!--base_cylinder_joint-->
+      {% if direc == 0 %}
+          <origin rpy="{{pi/2}} 0 0" xyz="{{box_x/2}} {{box_y/2}} {{box_z/2}}"/>
+      {% endif %}
+      {% if direc == 1 %}
+          <origin rpy="-{{pi/2}} 0 0" xyz="{{box_x/2}} -{{box_y/2}} {{box_z/2}}"/>
+      {% endif %}
+      {% if direc == 2 %}
+          <origin rpy="{{pi/2}} 0 0" xyz="-{{box_x/2}} -{{box_y/2}} {{box_z/2}}"/>
+      {% endif %}
+      {% if direc == 3 %}
+          <origin rpy="-{{pi/2}} 0 0" xyz="-{{box_x/2}} {{box_y/2}} {{box_z/2}}"/>
+      {% endif %}
+      {% endif %}
+
+      <child link="junta1_{{n}}_{{direc}}"/>
+
+      <axis xyz="0 1 0" />
+    </joint>
+    <joint name="joint2_{{n}}_{{direc}}" type="continuous">
+      <parent link="junta1_{{n}}_{{direc}}"/>
+      <child link="junta2_{{n}}_{{direc}}"/>
+      <axis xyz="0 0 1" />
+    </joint>
+    <joint name="joint3_{{n}}_{{direc}}" type="continuous">
+      <parent link="junta2_{{n}}_{{direc}}"/>
+      <child link="junta3_{{n}}_{{direc}}"/>
+      <axis xyz="1 0 0" />
+    </joint>
+    <joint name="jointfixed_{{n}}_{{direc}}" type="fixed">
+      <parent link="junta3_{{n}}_{{direc}}"/>
+      <child link="link_cylinder_{{n}}_{{direc}}"/>
+      {% if direc == 0 %}
+      <origin rpy="0 0 0" xyz="0 0 -{{cyl_l/2}}"/>
+      {% endif %}
+      {% if direc == 1 %}
+      <origin rpy="0 0 0" xyz="0 0 -{{cyl_l/2}}"/>
+      {% endif %}
+      {% if direc == 2 %}
+      <origin rpy="0 0 0" xyz="0 0 {{cyl_l/2}}"/>
+      {% endif %}
+      {% if direc == 3 %}
+      <origin rpy="0 0 0" xyz="0 0 {{cyl_l/2}}"/>
+      {% endif %}
+    </joint>
+  {%- endmacro -%}
+
+
+  <!--base_component-->
+    <link name="base_link">
+      <visual>
+        <geometry>
+          <box size="{{box_x}} {{box_y}} {{box_z}}"/>
+        </geometry>
+        <material name="silver">
+          <color rgba="0.75 0.75 0.75 1"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+          <box size="{{box_x}} {{box_y}} {{box_z}}"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="{{box_m}}"/>
+        {%- set box_ix = 1/12*box_m*(box_y**2+box_z**2) -%}
+        {%- set box_iy = 1/12*box_m*(box_x**2+box_z**2) -%}
+        {%- set box_iz = 1/12*box_m*(box_x**2+box_y**2) -%}
+        <inertia ixx="{{box_ix}}" iyy="{{box_iy}}" izz="{{box_iz}}" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+    </link>
+
+
+    <!-- main-->
+    {%- set direc = 0 -%}
+    {% for direc in range(4)-%}
+    {% for n in range(0,number_elements) -%}
+    {{tether_cylinder_link(n, direc)}}
+    {{tether_cylinder_joint(n, direc)}}
+    {% endfor -%}
+    {% endfor -%}
+</robot>

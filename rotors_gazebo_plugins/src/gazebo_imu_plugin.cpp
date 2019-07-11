@@ -275,6 +275,10 @@ void GazeboImuPlugin::OnUpdate(const common::UpdateInfo& _info) {
 
   common::Time current_time = world_->SimTime();
   double dt = (current_time - last_time_).Double();
+  // in case dt < 0
+  if (dt < 0) {
+    dt = current_time.Double();
+  }
   last_time_ = current_time;
   double t = current_time.Double();
 

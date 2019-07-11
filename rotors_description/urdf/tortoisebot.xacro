@@ -1,0 +1,3972 @@
+<?xml version="1.0"?>
+<robot name="tortoisebot" xmlns:xacro="http://ros.org/wiki/xacro">><!-- tether_ball_link--><!-- tether_cylinder_link--><!--tether_ball_joint--><!--tether_cylinder_joint--><!--base_component-->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.6 0.3 0.3"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.75 0.75 0.75 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.6 0.3 0.3"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.015" iyy="0.0375" izz="0.0375" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+<!--base_ball_joint-->
+  <joint name="joint_ball_0" type="fixed">
+      <parent link="base_link"/>
+      <child link="link_ball_0_0"/>
+      <origin rpy="0 0 0" xyz="0.3 0.15 0.15"/>
+  </joint><joint name="joint_ball_1_0" type="fixed">
+    <parent link="link_cylinder_0_0"/>
+    <child link="link_ball_1_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_2_0" type="fixed">
+    <parent link="link_cylinder_1_0"/>
+    <child link="link_ball_2_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_3_0" type="fixed">
+    <parent link="link_cylinder_2_0"/>
+    <child link="link_ball_3_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_4_0" type="fixed">
+    <parent link="link_cylinder_3_0"/>
+    <child link="link_ball_4_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_5_0" type="fixed">
+    <parent link="link_cylinder_4_0"/>
+    <child link="link_ball_5_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_6_0" type="fixed">
+    <parent link="link_cylinder_5_0"/>
+    <child link="link_ball_6_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_7_0" type="fixed">
+    <parent link="link_cylinder_6_0"/>
+    <child link="link_ball_7_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_8_0" type="fixed">
+    <parent link="link_cylinder_7_0"/>
+    <child link="link_ball_8_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_9_0" type="fixed">
+    <parent link="link_cylinder_8_0"/>
+    <child link="link_ball_9_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_10_0" type="fixed">
+    <parent link="link_cylinder_9_0"/>
+    <child link="link_ball_10_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_11_0" type="fixed">
+    <parent link="link_cylinder_10_0"/>
+    <child link="link_ball_11_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_12_0" type="fixed">
+    <parent link="link_cylinder_11_0"/>
+    <child link="link_ball_12_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_13_0" type="fixed">
+    <parent link="link_cylinder_12_0"/>
+    <child link="link_ball_13_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_14_0" type="fixed">
+    <parent link="link_cylinder_13_0"/>
+    <child link="link_ball_14_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_15_0" type="fixed">
+    <parent link="link_cylinder_14_0"/>
+    <child link="link_ball_15_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_16_0" type="fixed">
+    <parent link="link_cylinder_15_0"/>
+    <child link="link_ball_16_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_17_0" type="fixed">
+    <parent link="link_cylinder_16_0"/>
+    <child link="link_ball_17_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_18_0" type="fixed">
+    <parent link="link_cylinder_17_0"/>
+    <child link="link_ball_18_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_19_0" type="fixed">
+    <parent link="link_cylinder_18_0"/>
+    <child link="link_ball_19_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_20_0" type="fixed">
+    <parent link="link_cylinder_19_0"/>
+    <child link="link_ball_20_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_21_0" type="fixed">
+    <parent link="link_cylinder_20_0"/>
+    <child link="link_ball_21_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_22_0" type="fixed">
+    <parent link="link_cylinder_21_0"/>
+    <child link="link_ball_22_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_23_0" type="fixed">
+    <parent link="link_cylinder_22_0"/>
+    <child link="link_ball_23_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_24_0" type="fixed">
+    <parent link="link_cylinder_23_0"/>
+    <child link="link_ball_24_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_25_0" type="fixed">
+    <parent link="link_cylinder_24_0"/>
+    <child link="link_ball_25_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_26_0" type="fixed">
+    <parent link="link_cylinder_25_0"/>
+    <child link="link_ball_26_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_27_0" type="fixed">
+    <parent link="link_cylinder_26_0"/>
+    <child link="link_ball_27_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_28_0" type="fixed">
+    <parent link="link_cylinder_27_0"/>
+    <child link="link_ball_28_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_29_0" type="fixed">
+    <parent link="link_cylinder_28_0"/>
+    <child link="link_ball_29_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_30_0" type="fixed">
+    <parent link="link_cylinder_29_0"/>
+    <child link="link_ball_30_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_31_0" type="fixed">
+    <parent link="link_cylinder_30_0"/>
+    <child link="link_ball_31_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_32_0" type="fixed">
+    <parent link="link_cylinder_31_0"/>
+    <child link="link_ball_32_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_33_0" type="fixed">
+    <parent link="link_cylinder_32_0"/>
+    <child link="link_ball_33_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_34_0" type="fixed">
+    <parent link="link_cylinder_33_0"/>
+    <child link="link_ball_34_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_35_0" type="fixed">
+    <parent link="link_cylinder_34_0"/>
+    <child link="link_ball_35_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_36_0" type="fixed">
+    <parent link="link_cylinder_35_0"/>
+    <child link="link_ball_36_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_37_0" type="fixed">
+    <parent link="link_cylinder_36_0"/>
+    <child link="link_ball_37_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_38_0" type="fixed">
+    <parent link="link_cylinder_37_0"/>
+    <child link="link_ball_38_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_39_0" type="fixed">
+    <parent link="link_cylinder_38_0"/>
+    <child link="link_ball_39_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_40_0" type="fixed">
+    <parent link="link_cylinder_39_0"/>
+    <child link="link_ball_40_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_41_0" type="fixed">
+    <parent link="link_cylinder_40_0"/>
+    <child link="link_ball_41_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_42_0" type="fixed">
+    <parent link="link_cylinder_41_0"/>
+    <child link="link_ball_42_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_43_0" type="fixed">
+    <parent link="link_cylinder_42_0"/>
+    <child link="link_ball_43_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_44_0" type="fixed">
+    <parent link="link_cylinder_43_0"/>
+    <child link="link_ball_44_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_45_0" type="fixed">
+    <parent link="link_cylinder_44_0"/>
+    <child link="link_ball_45_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_46_0" type="fixed">
+    <parent link="link_cylinder_45_0"/>
+    <child link="link_ball_46_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_47_0" type="fixed">
+    <parent link="link_cylinder_46_0"/>
+    <child link="link_ball_47_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_48_0" type="fixed">
+    <parent link="link_cylinder_47_0"/>
+    <child link="link_ball_48_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <joint name="joint_ball_49_0" type="fixed">
+    <parent link="link_cylinder_48_0"/>
+    <child link="link_ball_49_0"/>
+    <origin rpy="-1.570796 0 0" xyz="0 0 -0.015"/>
+  </joint>
+  <link name="link_ball_0_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_0_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_0_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_0_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_0_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_0_0" type="continuous">
+    <parent link="link_ball_0_0"/>
+    <child link="junta1_0_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_0_0" type="continuous">
+    <parent link="junta1_0_0"/>
+    <child link="junta2_0_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_0_0" type="continuous">
+    <parent link="junta2_0_0"/>
+    <child link="junta3_0_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_0_0" type="fixed">
+    <parent link="junta3_0_0"/>
+    <child link="link_cylinder_0_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_1_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_1_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_1_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_1_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_1_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_1_0" type="continuous">
+    <parent link="link_ball_1_0"/>
+    <child link="junta1_1_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_1_0" type="continuous">
+    <parent link="junta1_1_0"/>
+    <child link="junta2_1_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_1_0" type="continuous">
+    <parent link="junta2_1_0"/>
+    <child link="junta3_1_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_1_0" type="fixed">
+    <parent link="junta3_1_0"/>
+    <child link="link_cylinder_1_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_2_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_2_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_2_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_2_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_2_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_2_0" type="continuous">
+    <parent link="link_ball_2_0"/>
+    <child link="junta1_2_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_2_0" type="continuous">
+    <parent link="junta1_2_0"/>
+    <child link="junta2_2_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_2_0" type="continuous">
+    <parent link="junta2_2_0"/>
+    <child link="junta3_2_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_2_0" type="fixed">
+    <parent link="junta3_2_0"/>
+    <child link="link_cylinder_2_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_3_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_3_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_3_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_3_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_3_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_3_0" type="continuous">
+    <parent link="link_ball_3_0"/>
+    <child link="junta1_3_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_3_0" type="continuous">
+    <parent link="junta1_3_0"/>
+    <child link="junta2_3_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_3_0" type="continuous">
+    <parent link="junta2_3_0"/>
+    <child link="junta3_3_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_3_0" type="fixed">
+    <parent link="junta3_3_0"/>
+    <child link="link_cylinder_3_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_4_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_4_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_4_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_4_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_4_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_4_0" type="continuous">
+    <parent link="link_ball_4_0"/>
+    <child link="junta1_4_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_4_0" type="continuous">
+    <parent link="junta1_4_0"/>
+    <child link="junta2_4_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_4_0" type="continuous">
+    <parent link="junta2_4_0"/>
+    <child link="junta3_4_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_4_0" type="fixed">
+    <parent link="junta3_4_0"/>
+    <child link="link_cylinder_4_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_5_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_5_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_5_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_5_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_5_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_5_0" type="continuous">
+    <parent link="link_ball_5_0"/>
+    <child link="junta1_5_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_5_0" type="continuous">
+    <parent link="junta1_5_0"/>
+    <child link="junta2_5_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_5_0" type="continuous">
+    <parent link="junta2_5_0"/>
+    <child link="junta3_5_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_5_0" type="fixed">
+    <parent link="junta3_5_0"/>
+    <child link="link_cylinder_5_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_6_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_6_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_6_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_6_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_6_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_6_0" type="continuous">
+    <parent link="link_ball_6_0"/>
+    <child link="junta1_6_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_6_0" type="continuous">
+    <parent link="junta1_6_0"/>
+    <child link="junta2_6_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_6_0" type="continuous">
+    <parent link="junta2_6_0"/>
+    <child link="junta3_6_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_6_0" type="fixed">
+    <parent link="junta3_6_0"/>
+    <child link="link_cylinder_6_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_7_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_7_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_7_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_7_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_7_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_7_0" type="continuous">
+    <parent link="link_ball_7_0"/>
+    <child link="junta1_7_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_7_0" type="continuous">
+    <parent link="junta1_7_0"/>
+    <child link="junta2_7_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_7_0" type="continuous">
+    <parent link="junta2_7_0"/>
+    <child link="junta3_7_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_7_0" type="fixed">
+    <parent link="junta3_7_0"/>
+    <child link="link_cylinder_7_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_8_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_8_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_8_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_8_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_8_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_8_0" type="continuous">
+    <parent link="link_ball_8_0"/>
+    <child link="junta1_8_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_8_0" type="continuous">
+    <parent link="junta1_8_0"/>
+    <child link="junta2_8_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_8_0" type="continuous">
+    <parent link="junta2_8_0"/>
+    <child link="junta3_8_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_8_0" type="fixed">
+    <parent link="junta3_8_0"/>
+    <child link="link_cylinder_8_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_9_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_9_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_9_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_9_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_9_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_9_0" type="continuous">
+    <parent link="link_ball_9_0"/>
+    <child link="junta1_9_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_9_0" type="continuous">
+    <parent link="junta1_9_0"/>
+    <child link="junta2_9_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_9_0" type="continuous">
+    <parent link="junta2_9_0"/>
+    <child link="junta3_9_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_9_0" type="fixed">
+    <parent link="junta3_9_0"/>
+    <child link="link_cylinder_9_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_10_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_10_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_10_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_10_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_10_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_10_0" type="continuous">
+    <parent link="link_ball_10_0"/>
+    <child link="junta1_10_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_10_0" type="continuous">
+    <parent link="junta1_10_0"/>
+    <child link="junta2_10_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_10_0" type="continuous">
+    <parent link="junta2_10_0"/>
+    <child link="junta3_10_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_10_0" type="fixed">
+    <parent link="junta3_10_0"/>
+    <child link="link_cylinder_10_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_11_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_11_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_11_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_11_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_11_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_11_0" type="continuous">
+    <parent link="link_ball_11_0"/>
+    <child link="junta1_11_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_11_0" type="continuous">
+    <parent link="junta1_11_0"/>
+    <child link="junta2_11_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_11_0" type="continuous">
+    <parent link="junta2_11_0"/>
+    <child link="junta3_11_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_11_0" type="fixed">
+    <parent link="junta3_11_0"/>
+    <child link="link_cylinder_11_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_12_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_12_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_12_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_12_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_12_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_12_0" type="continuous">
+    <parent link="link_ball_12_0"/>
+    <child link="junta1_12_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_12_0" type="continuous">
+    <parent link="junta1_12_0"/>
+    <child link="junta2_12_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_12_0" type="continuous">
+    <parent link="junta2_12_0"/>
+    <child link="junta3_12_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_12_0" type="fixed">
+    <parent link="junta3_12_0"/>
+    <child link="link_cylinder_12_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_13_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_13_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_13_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_13_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_13_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_13_0" type="continuous">
+    <parent link="link_ball_13_0"/>
+    <child link="junta1_13_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_13_0" type="continuous">
+    <parent link="junta1_13_0"/>
+    <child link="junta2_13_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_13_0" type="continuous">
+    <parent link="junta2_13_0"/>
+    <child link="junta3_13_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_13_0" type="fixed">
+    <parent link="junta3_13_0"/>
+    <child link="link_cylinder_13_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_14_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_14_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_14_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_14_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_14_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_14_0" type="continuous">
+    <parent link="link_ball_14_0"/>
+    <child link="junta1_14_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_14_0" type="continuous">
+    <parent link="junta1_14_0"/>
+    <child link="junta2_14_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_14_0" type="continuous">
+    <parent link="junta2_14_0"/>
+    <child link="junta3_14_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_14_0" type="fixed">
+    <parent link="junta3_14_0"/>
+    <child link="link_cylinder_14_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_15_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_15_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_15_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_15_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_15_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_15_0" type="continuous">
+    <parent link="link_ball_15_0"/>
+    <child link="junta1_15_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_15_0" type="continuous">
+    <parent link="junta1_15_0"/>
+    <child link="junta2_15_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_15_0" type="continuous">
+    <parent link="junta2_15_0"/>
+    <child link="junta3_15_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_15_0" type="fixed">
+    <parent link="junta3_15_0"/>
+    <child link="link_cylinder_15_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_16_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_16_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_16_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_16_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_16_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_16_0" type="continuous">
+    <parent link="link_ball_16_0"/>
+    <child link="junta1_16_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_16_0" type="continuous">
+    <parent link="junta1_16_0"/>
+    <child link="junta2_16_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_16_0" type="continuous">
+    <parent link="junta2_16_0"/>
+    <child link="junta3_16_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_16_0" type="fixed">
+    <parent link="junta3_16_0"/>
+    <child link="link_cylinder_16_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_17_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_17_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_17_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_17_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_17_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_17_0" type="continuous">
+    <parent link="link_ball_17_0"/>
+    <child link="junta1_17_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_17_0" type="continuous">
+    <parent link="junta1_17_0"/>
+    <child link="junta2_17_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_17_0" type="continuous">
+    <parent link="junta2_17_0"/>
+    <child link="junta3_17_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_17_0" type="fixed">
+    <parent link="junta3_17_0"/>
+    <child link="link_cylinder_17_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_18_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_18_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_18_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_18_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_18_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_18_0" type="continuous">
+    <parent link="link_ball_18_0"/>
+    <child link="junta1_18_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_18_0" type="continuous">
+    <parent link="junta1_18_0"/>
+    <child link="junta2_18_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_18_0" type="continuous">
+    <parent link="junta2_18_0"/>
+    <child link="junta3_18_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_18_0" type="fixed">
+    <parent link="junta3_18_0"/>
+    <child link="link_cylinder_18_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_19_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_19_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_19_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_19_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_19_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_19_0" type="continuous">
+    <parent link="link_ball_19_0"/>
+    <child link="junta1_19_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_19_0" type="continuous">
+    <parent link="junta1_19_0"/>
+    <child link="junta2_19_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_19_0" type="continuous">
+    <parent link="junta2_19_0"/>
+    <child link="junta3_19_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_19_0" type="fixed">
+    <parent link="junta3_19_0"/>
+    <child link="link_cylinder_19_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_20_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_20_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_20_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_20_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_20_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_20_0" type="continuous">
+    <parent link="link_ball_20_0"/>
+    <child link="junta1_20_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_20_0" type="continuous">
+    <parent link="junta1_20_0"/>
+    <child link="junta2_20_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_20_0" type="continuous">
+    <parent link="junta2_20_0"/>
+    <child link="junta3_20_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_20_0" type="fixed">
+    <parent link="junta3_20_0"/>
+    <child link="link_cylinder_20_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_21_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_21_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_21_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_21_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_21_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_21_0" type="continuous">
+    <parent link="link_ball_21_0"/>
+    <child link="junta1_21_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_21_0" type="continuous">
+    <parent link="junta1_21_0"/>
+    <child link="junta2_21_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_21_0" type="continuous">
+    <parent link="junta2_21_0"/>
+    <child link="junta3_21_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_21_0" type="fixed">
+    <parent link="junta3_21_0"/>
+    <child link="link_cylinder_21_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_22_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_22_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_22_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_22_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_22_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_22_0" type="continuous">
+    <parent link="link_ball_22_0"/>
+    <child link="junta1_22_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_22_0" type="continuous">
+    <parent link="junta1_22_0"/>
+    <child link="junta2_22_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_22_0" type="continuous">
+    <parent link="junta2_22_0"/>
+    <child link="junta3_22_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_22_0" type="fixed">
+    <parent link="junta3_22_0"/>
+    <child link="link_cylinder_22_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_23_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_23_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_23_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_23_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_23_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_23_0" type="continuous">
+    <parent link="link_ball_23_0"/>
+    <child link="junta1_23_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_23_0" type="continuous">
+    <parent link="junta1_23_0"/>
+    <child link="junta2_23_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_23_0" type="continuous">
+    <parent link="junta2_23_0"/>
+    <child link="junta3_23_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_23_0" type="fixed">
+    <parent link="junta3_23_0"/>
+    <child link="link_cylinder_23_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_24_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_24_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_24_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_24_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_24_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_24_0" type="continuous">
+    <parent link="link_ball_24_0"/>
+    <child link="junta1_24_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_24_0" type="continuous">
+    <parent link="junta1_24_0"/>
+    <child link="junta2_24_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_24_0" type="continuous">
+    <parent link="junta2_24_0"/>
+    <child link="junta3_24_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_24_0" type="fixed">
+    <parent link="junta3_24_0"/>
+    <child link="link_cylinder_24_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_25_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_25_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_25_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_25_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_25_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_25_0" type="continuous">
+    <parent link="link_ball_25_0"/>
+    <child link="junta1_25_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_25_0" type="continuous">
+    <parent link="junta1_25_0"/>
+    <child link="junta2_25_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_25_0" type="continuous">
+    <parent link="junta2_25_0"/>
+    <child link="junta3_25_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_25_0" type="fixed">
+    <parent link="junta3_25_0"/>
+    <child link="link_cylinder_25_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_26_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_26_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_26_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_26_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_26_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_26_0" type="continuous">
+    <parent link="link_ball_26_0"/>
+    <child link="junta1_26_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_26_0" type="continuous">
+    <parent link="junta1_26_0"/>
+    <child link="junta2_26_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_26_0" type="continuous">
+    <parent link="junta2_26_0"/>
+    <child link="junta3_26_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_26_0" type="fixed">
+    <parent link="junta3_26_0"/>
+    <child link="link_cylinder_26_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_27_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_27_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_27_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_27_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_27_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_27_0" type="continuous">
+    <parent link="link_ball_27_0"/>
+    <child link="junta1_27_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_27_0" type="continuous">
+    <parent link="junta1_27_0"/>
+    <child link="junta2_27_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_27_0" type="continuous">
+    <parent link="junta2_27_0"/>
+    <child link="junta3_27_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_27_0" type="fixed">
+    <parent link="junta3_27_0"/>
+    <child link="link_cylinder_27_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_28_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_28_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_28_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_28_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_28_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_28_0" type="continuous">
+    <parent link="link_ball_28_0"/>
+    <child link="junta1_28_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_28_0" type="continuous">
+    <parent link="junta1_28_0"/>
+    <child link="junta2_28_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_28_0" type="continuous">
+    <parent link="junta2_28_0"/>
+    <child link="junta3_28_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_28_0" type="fixed">
+    <parent link="junta3_28_0"/>
+    <child link="link_cylinder_28_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_29_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_29_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_29_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_29_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_29_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_29_0" type="continuous">
+    <parent link="link_ball_29_0"/>
+    <child link="junta1_29_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_29_0" type="continuous">
+    <parent link="junta1_29_0"/>
+    <child link="junta2_29_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_29_0" type="continuous">
+    <parent link="junta2_29_0"/>
+    <child link="junta3_29_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_29_0" type="fixed">
+    <parent link="junta3_29_0"/>
+    <child link="link_cylinder_29_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_30_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_30_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_30_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_30_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_30_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_30_0" type="continuous">
+    <parent link="link_ball_30_0"/>
+    <child link="junta1_30_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_30_0" type="continuous">
+    <parent link="junta1_30_0"/>
+    <child link="junta2_30_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_30_0" type="continuous">
+    <parent link="junta2_30_0"/>
+    <child link="junta3_30_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_30_0" type="fixed">
+    <parent link="junta3_30_0"/>
+    <child link="link_cylinder_30_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_31_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_31_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_31_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_31_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_31_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_31_0" type="continuous">
+    <parent link="link_ball_31_0"/>
+    <child link="junta1_31_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_31_0" type="continuous">
+    <parent link="junta1_31_0"/>
+    <child link="junta2_31_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_31_0" type="continuous">
+    <parent link="junta2_31_0"/>
+    <child link="junta3_31_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_31_0" type="fixed">
+    <parent link="junta3_31_0"/>
+    <child link="link_cylinder_31_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_32_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_32_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_32_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_32_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_32_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_32_0" type="continuous">
+    <parent link="link_ball_32_0"/>
+    <child link="junta1_32_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_32_0" type="continuous">
+    <parent link="junta1_32_0"/>
+    <child link="junta2_32_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_32_0" type="continuous">
+    <parent link="junta2_32_0"/>
+    <child link="junta3_32_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_32_0" type="fixed">
+    <parent link="junta3_32_0"/>
+    <child link="link_cylinder_32_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_33_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_33_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_33_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_33_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_33_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_33_0" type="continuous">
+    <parent link="link_ball_33_0"/>
+    <child link="junta1_33_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_33_0" type="continuous">
+    <parent link="junta1_33_0"/>
+    <child link="junta2_33_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_33_0" type="continuous">
+    <parent link="junta2_33_0"/>
+    <child link="junta3_33_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_33_0" type="fixed">
+    <parent link="junta3_33_0"/>
+    <child link="link_cylinder_33_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_34_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_34_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_34_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_34_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_34_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_34_0" type="continuous">
+    <parent link="link_ball_34_0"/>
+    <child link="junta1_34_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_34_0" type="continuous">
+    <parent link="junta1_34_0"/>
+    <child link="junta2_34_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_34_0" type="continuous">
+    <parent link="junta2_34_0"/>
+    <child link="junta3_34_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_34_0" type="fixed">
+    <parent link="junta3_34_0"/>
+    <child link="link_cylinder_34_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_35_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_35_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_35_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_35_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_35_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_35_0" type="continuous">
+    <parent link="link_ball_35_0"/>
+    <child link="junta1_35_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_35_0" type="continuous">
+    <parent link="junta1_35_0"/>
+    <child link="junta2_35_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_35_0" type="continuous">
+    <parent link="junta2_35_0"/>
+    <child link="junta3_35_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_35_0" type="fixed">
+    <parent link="junta3_35_0"/>
+    <child link="link_cylinder_35_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_36_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_36_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_36_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_36_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_36_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_36_0" type="continuous">
+    <parent link="link_ball_36_0"/>
+    <child link="junta1_36_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_36_0" type="continuous">
+    <parent link="junta1_36_0"/>
+    <child link="junta2_36_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_36_0" type="continuous">
+    <parent link="junta2_36_0"/>
+    <child link="junta3_36_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_36_0" type="fixed">
+    <parent link="junta3_36_0"/>
+    <child link="link_cylinder_36_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_37_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_37_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_37_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_37_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_37_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_37_0" type="continuous">
+    <parent link="link_ball_37_0"/>
+    <child link="junta1_37_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_37_0" type="continuous">
+    <parent link="junta1_37_0"/>
+    <child link="junta2_37_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_37_0" type="continuous">
+    <parent link="junta2_37_0"/>
+    <child link="junta3_37_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_37_0" type="fixed">
+    <parent link="junta3_37_0"/>
+    <child link="link_cylinder_37_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_38_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_38_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_38_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_38_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_38_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_38_0" type="continuous">
+    <parent link="link_ball_38_0"/>
+    <child link="junta1_38_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_38_0" type="continuous">
+    <parent link="junta1_38_0"/>
+    <child link="junta2_38_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_38_0" type="continuous">
+    <parent link="junta2_38_0"/>
+    <child link="junta3_38_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_38_0" type="fixed">
+    <parent link="junta3_38_0"/>
+    <child link="link_cylinder_38_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_39_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_39_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_39_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_39_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_39_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_39_0" type="continuous">
+    <parent link="link_ball_39_0"/>
+    <child link="junta1_39_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_39_0" type="continuous">
+    <parent link="junta1_39_0"/>
+    <child link="junta2_39_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_39_0" type="continuous">
+    <parent link="junta2_39_0"/>
+    <child link="junta3_39_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_39_0" type="fixed">
+    <parent link="junta3_39_0"/>
+    <child link="link_cylinder_39_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_40_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_40_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_40_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_40_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_40_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_40_0" type="continuous">
+    <parent link="link_ball_40_0"/>
+    <child link="junta1_40_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_40_0" type="continuous">
+    <parent link="junta1_40_0"/>
+    <child link="junta2_40_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_40_0" type="continuous">
+    <parent link="junta2_40_0"/>
+    <child link="junta3_40_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_40_0" type="fixed">
+    <parent link="junta3_40_0"/>
+    <child link="link_cylinder_40_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_41_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_41_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_41_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_41_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_41_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_41_0" type="continuous">
+    <parent link="link_ball_41_0"/>
+    <child link="junta1_41_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_41_0" type="continuous">
+    <parent link="junta1_41_0"/>
+    <child link="junta2_41_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_41_0" type="continuous">
+    <parent link="junta2_41_0"/>
+    <child link="junta3_41_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_41_0" type="fixed">
+    <parent link="junta3_41_0"/>
+    <child link="link_cylinder_41_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_42_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_42_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_42_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_42_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_42_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_42_0" type="continuous">
+    <parent link="link_ball_42_0"/>
+    <child link="junta1_42_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_42_0" type="continuous">
+    <parent link="junta1_42_0"/>
+    <child link="junta2_42_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_42_0" type="continuous">
+    <parent link="junta2_42_0"/>
+    <child link="junta3_42_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_42_0" type="fixed">
+    <parent link="junta3_42_0"/>
+    <child link="link_cylinder_42_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_43_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_43_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_43_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_43_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_43_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_43_0" type="continuous">
+    <parent link="link_ball_43_0"/>
+    <child link="junta1_43_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_43_0" type="continuous">
+    <parent link="junta1_43_0"/>
+    <child link="junta2_43_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_43_0" type="continuous">
+    <parent link="junta2_43_0"/>
+    <child link="junta3_43_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_43_0" type="fixed">
+    <parent link="junta3_43_0"/>
+    <child link="link_cylinder_43_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_44_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_44_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_44_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_44_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_44_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_44_0" type="continuous">
+    <parent link="link_ball_44_0"/>
+    <child link="junta1_44_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_44_0" type="continuous">
+    <parent link="junta1_44_0"/>
+    <child link="junta2_44_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_44_0" type="continuous">
+    <parent link="junta2_44_0"/>
+    <child link="junta3_44_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_44_0" type="fixed">
+    <parent link="junta3_44_0"/>
+    <child link="link_cylinder_44_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_45_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_45_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_45_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_45_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_45_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_45_0" type="continuous">
+    <parent link="link_ball_45_0"/>
+    <child link="junta1_45_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_45_0" type="continuous">
+    <parent link="junta1_45_0"/>
+    <child link="junta2_45_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_45_0" type="continuous">
+    <parent link="junta2_45_0"/>
+    <child link="junta3_45_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_45_0" type="fixed">
+    <parent link="junta3_45_0"/>
+    <child link="link_cylinder_45_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_46_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_46_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_46_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_46_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_46_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_46_0" type="continuous">
+    <parent link="link_ball_46_0"/>
+    <child link="junta1_46_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_46_0" type="continuous">
+    <parent link="junta1_46_0"/>
+    <child link="junta2_46_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_46_0" type="continuous">
+    <parent link="junta2_46_0"/>
+    <child link="junta3_46_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_46_0" type="fixed">
+    <parent link="junta3_46_0"/>
+    <child link="link_cylinder_46_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_47_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_47_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_47_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_47_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_47_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_47_0" type="continuous">
+    <parent link="link_ball_47_0"/>
+    <child link="junta1_47_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_47_0" type="continuous">
+    <parent link="junta1_47_0"/>
+    <child link="junta2_47_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_47_0" type="continuous">
+    <parent link="junta2_47_0"/>
+    <child link="junta3_47_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_47_0" type="fixed">
+    <parent link="junta3_47_0"/>
+    <child link="link_cylinder_47_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_48_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_48_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_48_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_48_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_48_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_48_0" type="continuous">
+    <parent link="link_ball_48_0"/>
+    <child link="junta1_48_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_48_0" type="continuous">
+    <parent link="junta1_48_0"/>
+    <child link="junta2_48_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_48_0" type="continuous">
+    <parent link="junta2_48_0"/>
+    <child link="junta3_48_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_48_0" type="fixed">
+    <parent link="junta3_48_0"/>
+    <child link="link_cylinder_48_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  <link name="link_ball_49_0">
+    <visual>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.005"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="5e-09" iyy="5e-09" izz="5e-09" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="link_cylinder_49_0">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.03" radius="0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0005"/><inertia ixx="3.7625e-08" iyy="3.7625e-08" izz="2.5e-10" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  <link name="junta1_49_0"><inertial>
+      <mass value="0.0005" />
+      <!--<inertia ixx="5e-09" ixy="0" ixz="0" iyy="5e-09" iyz="0" izz="5e-09" />-->
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta2_49_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <link name="junta3_49_0">
+    <inertial>
+      <mass value="0.0005" />
+      <inertia ixx="5.8083e-4" ixy="0" ixz="0" iyy="3.0833e-5" iyz="0" izz="5.9083e-4" />
+    </inertial>
+  </link>
+  <joint name="joint1_49_0" type="continuous">
+    <parent link="link_ball_49_0"/>
+    <child link="junta1_49_0"/>
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="joint2_49_0" type="continuous">
+    <parent link="junta1_49_0"/>
+    <child link="junta2_49_0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="joint3_49_0" type="continuous">
+    <parent link="junta2_49_0"/>
+    <child link="junta3_49_0"/>
+    <axis xyz="1 0 0" />
+  </joint>
+  <joint name="jointfixed_49_0" type="fixed">
+    <parent link="junta3_49_0"/>
+    <child link="link_cylinder_49_0"/>
+    <origin rpy="1.570796 0 0" xyz="0 0.015 0"/>
+  </joint>
+  </robot>
